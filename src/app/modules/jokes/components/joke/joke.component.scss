@@ -1,0 +1,11 @@
+@import 'utils/rem';
+@import 'variables/font-sizes';
+
+.joke-image {
+    width: rem(64px);
+    height: rem(64px);
+}
+
+.joke-text {
+    font-size: rem($font-size-20);
+}

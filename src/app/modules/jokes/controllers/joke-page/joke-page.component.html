@@ -1,0 +1,7 @@
+<mat-card *ngIf="!!joke" class="w-100">
+    <app-joke
+        [joke]="joke"
+        (goBack)="goBack()"
+        (anotherOne)="getAnotherOne()"
+    ></app-joke>
+</mat-card>

@@ -1,0 +1,15 @@
+@import '../variables/sizes';
+@import '../utils/rem';
+
+$spacers: (
+    0: 0,
+    4: rem($size-4),
+    8: rem($size-8),
+    16: rem($size-16),
+    24: rem($size-24),
+    32: rem($size-32),
+    48: rem($size-48),
+);
+
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/utilities/api";

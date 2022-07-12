@@ -1,1 +1,6 @@
-<p>categories-list-page works!</p>
+<mat-card *ngIf="!!categories" class="w-100">
+    <app-categories-list
+        [categories]="categories"
+        (categorySelect)="onCategorySelect($event)"
+    ></app-categories-list>
+</mat-card>

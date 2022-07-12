@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CategoriesListPageComponent } from './categories-list-page.component';
+import { JokePageComponent } from './joke-page.component';
 import { RouterModule } from '@angular/router';
+import { JokeModule } from '../../components/joke/joke.module';
 import { MatCardModule } from '@angular/material/card';
-import { CategoriesListModule } from '../../components/categories-list/categories-list.module';
-
 
 @NgModule({
   declarations: [
-    CategoriesListPageComponent
+    JokePageComponent,
   ],
   imports: [
     CommonModule,
+    JokeModule,
     MatCardModule,
-    CategoriesListModule,
     RouterModule.forChild([
       {
         path: '',
-        component: CategoriesListPageComponent,
+        component: JokePageComponent,
       },
     ]),
-  ]
+  ],
 })
-export class CategoriesListPageModule { }
+export class JokePageModule { }

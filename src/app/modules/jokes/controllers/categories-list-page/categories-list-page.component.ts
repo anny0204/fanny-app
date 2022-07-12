@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RoutingPathService } from '@routing/services/routing-path.service';
+import { CategoriesApiService } from 'src/app/connection/services/categories-api.service';
 
 @Component({
   selector: 'app-categories-list-page',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesListPageComponent implements OnInit {
 
-  constructor() { }
+  public categories: string[];
 
-  ngOnInit(): void {
+  public constructor(
+    private categoriesApiService: CategoriesApiService,
+    private router: Router,
+    private routingPathService: RoutingPathService,
+  ) { }
+
+  public ngOnInit(): void {
+    this.fetchServerData()
+  }
+
+  public onCategorySelect(category: string):void {
+    void this.router.navigate(this.routingPathService.getJoke(category));
+  }
+
+  private fetchServerData(): void {
+    this.categoriesApiService.getCategories()
+      .subscribe((categories: string[]) => {
+        this.categories = categories;
+      });
   }
 
 }

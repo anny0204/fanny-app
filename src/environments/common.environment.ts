@@ -4,7 +4,7 @@ export const commonEnvironment = {
             LIST: 'categories',
         },
         JOKES: {
-            READ: 'jokes',
+            READ: 'random',
         }
     }
 };

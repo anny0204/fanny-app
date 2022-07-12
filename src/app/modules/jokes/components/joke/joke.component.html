@@ -1,0 +1,24 @@
+<div class="d-flex flex-column">
+    <div>
+        <button
+            mat-fab
+            class="mat-primary m-16"
+            (click)="handleGoBack()">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+    </div>
+    <div class="d-flex justify-content-center my-48">
+        <img [src]="joke.icon_url" alt="Joke image" class="joke-image">
+    </div>
+    <div class="d-flex justify-content-center m-48 joke-text">
+        {{ joke.value }}
+    </div>
+    <div class="d-flex justify-content-center mb-48">
+        <button
+                mat-button
+                class="mat-primary small text-uppercase m-16"
+                (click)="getAnotherOne()"
+            >Another one
+            </button>
+    </div>
+</div>

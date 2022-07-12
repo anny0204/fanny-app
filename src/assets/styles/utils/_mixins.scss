@@ -1,0 +1,11 @@
+@mixin bp-xl {
+    @media (min-width: 1200px) {
+        @content
+    }
+}
+
+@mixin bp-lg {
+    @media (min-width: 992px) {
+        @content
+    }
+}

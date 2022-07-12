@@ -1,0 +1,30 @@
+@import '../variables/font-sizes';
+@import '../variables/sizes';
+@import '../variables/font-sizes';
+@import '../variables/colors';
+@import '../utils/rem';
+
+$button-width: rem($size-256);
+$large-button-height: rem($size-128);
+
+$small-button-width: rem($size-128);
+$small-button-height: rem($size-72);
+
+.mat-button, .mat-fab {
+    &.mat-primary {
+        background-color: $blue-800;
+        color: $white;
+
+        &.large {
+            height: $large-button-height;
+            width: $button-width;
+            font-size: rem($font-size-32);
+        }
+
+        &.small {
+            height: $small-button-height;
+            width: $button-width;
+            font-size: rem($font-size-20);
+        }
+    }
+}

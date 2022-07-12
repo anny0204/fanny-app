@@ -1,10 +1,9 @@
-@import 'colors';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
-html,
-body {
-    font-size: 14px;
-}
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/reboot";
 
-body {
-    color: $text-color;
-}
+@import 'assets/styles/styles.scss';
